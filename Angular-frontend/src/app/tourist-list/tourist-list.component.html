@@ -1,0 +1,31 @@
+<h2 style = "color:#055160;">Tourist List</h2>
+<table class= "table table-striped" >
+    <thead>
+        <tr>
+            <th> id</th>
+            <th> First Name</th>
+            <th> Last Name</th>
+            <th> Gender</th>
+            <th> age</th>
+            <th> FromPlace</th>
+            <th> NumberOfDays</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor ="let tourist of tourists">
+            <td> {{ tourist.id }}</td>
+            <td> {{ tourist.FirstName }} </td>
+            <td> {{ tourist.LastName }} </td>
+            <td> {{ tourist.Gender }} </td>
+            <td> {{ tourist.age }} </td>
+            <td> {{ tourist.FromPlace }} </td>
+            <td> {{ tourist.NumberOfDays }} </td>
+            <td>
+                <label></label>
+                <button (click) = "updateTourist(tourist.id)" class = "btn btn-success">Update</button>
+                <button (click) = "touristDetails(tourist.id)" class= "btn btn-info" style="margin-left: 10px;">View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
